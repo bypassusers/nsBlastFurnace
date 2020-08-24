@@ -12,8 +12,6 @@ import java.util.function.Predicate;
 public class walkToBF {
     private Predicate<RSItem> ORE_PREDICATE = o -> o.getDefinition().getName().contains("ore") || o.getDefinition().getName().contains("Coal");
 
-
-
     public walkToBF() {
         if (!Locations.BLAST_FURNACE.contains(Player.getPosition())) {
             General.println("[Script] Walking to Blast Furnace area.");

@@ -32,7 +32,7 @@ public class buyFromGE {
             if (Banking.isBankLoaded()) {
                 if (Banking.find(COINS_PREDICATE).length < 1_000_000) {
                     General.sleep(antiban.getWaitingTime());
-                    Banking.withdraw(999999, "Coins");
+                    Banking.withdraw(999_999_999, "Coins");
 
 
                 }
