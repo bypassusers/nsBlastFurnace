@@ -1,16 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager">
+    <output url="file://$USER_HOME$/Library/Application Support/tribot/bin/scripts" />
+    <output-test url="file://$USER_HOME$/Library/Application Support/tribot/bin/scripts" />
     <exclude-output />
+    <javadoc-paths>
+      <root url="http://www.docs.tribot.org/tribot/latest/" />
+    </javadoc-paths>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Java MySQL Connector" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Library/Application Support/tribot/dependancies/TRiBot-11.1.8.jar!/" />
+          <root url="jar://$USER_HOME$/Library/Application Support/tribot/dependancies/allatori-annotations-7.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Library/Application Support/tribot/dependancies/gson-2.8.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="DaxWalker" level="application" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/TRiBot-11.1.5 copy.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Library/Application Support/tribot/dependancies/guava-26.0-jre.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

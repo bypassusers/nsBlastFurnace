@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="nsBlastFurnace:jar">
+    <output-path>$USER_HOME$/Library/Application Support/tribot/bin/scripts</output-path>
+    <root id="archive" name="nsBlastFurnace.jar">
+      <element id="module-output" name="nsBlastFurnace" />
+      <element id="library" level="application" name="DaxWalker" />
+      <element id="extracted-dir" path="$USER_HOME$/Library/Application Support/tribot/dependancies/allatori-annotations-7.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Library/Application Support/tribot/dependancies/gson-2.8.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.21/mysql-connector-java-8.0.21.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
