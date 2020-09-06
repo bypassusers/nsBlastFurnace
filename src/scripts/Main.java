@@ -1,10 +1,12 @@
 package scripts;
 import com.sun.tools.javah.Gen;
 import org.tribot.api.General;
+import org.tribot.api.Timing;
 import org.tribot.api2007.Banking;
 import org.tribot.api2007.GrandExchange;
 import org.tribot.api2007.Player;
 import org.tribot.api2007.types.RSItem;
+import org.tribot.api2007.types.RSPlayer;
 import org.tribot.script.Script;
 import org.tribot.script.ScriptManifest;
 import scripts.antiban.antiban;
@@ -34,7 +36,7 @@ public class Main extends Script {
                 DaxWalker.setCredentials(new DaxCredentialsProvider() {
                     @Override
                     public DaxCredentials getDaxCredentials() {
-                        return new DaxCredentials("sub_DPjcfqN4YkIxm8", "sub_DPjXXzL5DeSiPf");
+                        return new DaxCredentials("PUBLIC-KEY", "PUBLIC-KEY");
                     }
                 });
             }
@@ -42,13 +44,21 @@ public class Main extends Script {
     }
     @Override
     public void run() {
+        RSPlayer local = Player.getRSPlayer();
+        if (local == null ) {
+            General.println("Player was not found");
+            return;
+        }
         DaxWalker.getInstance();
-        if (Locations.GRAND_EXCHANGE.contains(Player.getPosition())) {
-            antiban.getBankPreference();
-            General.sleep(antiban.getWaitingTime());
-            Banking.withdraw(999_999_999, "Coins");
-
-
+        if(!Banking.isBankScreenOpen()) {
+            if(antiban.getBankPreference() != null) {
+                Timing.waitCondition(() -> Banking.isBankScreenOpen(), General.random(4000,10000));
+                return;
+            }
+            if (BankHelper.findFirstContainingName("Coins")) {
+                Banking.withdraw(999_999_999, "Coins");
+                General.println("Withdrawing coins...");
+            }
 
         }
 

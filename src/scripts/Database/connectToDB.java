@@ -8,19 +8,18 @@ import java.sql.Statement;
 
 public class connectToDB {
     public connectToDB() {
-        try(
+        try (
                 Connection connection = DBCreds.getDBCreds();
                 Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 ResultSet results = statement.executeQuery("SELECT * FROM Accounts");
 
-                ) {
+        ) {
             results.last();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
 
 
 }

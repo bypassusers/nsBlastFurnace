@@ -1,7 +1,10 @@
 package scripts.locations;
 
 import org.tribot.api.interfaces.Positionable;
+import org.tribot.api2007.Player;
+import org.tribot.api2007.Players;
 import org.tribot.api2007.types.RSArea;
+import org.tribot.api2007.types.RSPlayer;
 import org.tribot.api2007.types.RSTile;
 
 public enum Locations implements Positionable {
